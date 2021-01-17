@@ -19,11 +19,14 @@ Follow these simple steps in order to get it up and running:
 
 ### Add the repository
 - Open the supervisor:
-  <img src="https://github.com/airthusiast/hassio-addons/raw/master/smart-friends-bridge/images/doc02.png" width="200">
+
+  <img src="https://github.com/airthusiast/hassio-addons/raw/master/smart-friends-bridge/images/doc02.png" alt="Open the supervisor" width="200">
 - Open the add-on store and go to repositories:
-  <img src="https://github.com/airthusiast/hassio-addons/raw/master/smart-friends-bridge/images/doc03.png" width="600">
+
+  <img src="https://github.com/airthusiast/hassio-addons/raw/master/smart-friends-bridge/images/doc03.png" alt="Open add-on store and go to repositories" width="600">
 - Add Aithusiast addons repository: https://github.com/airthusiast/hassio-addons
-  <img src="https://github.com/airthusiast/hassio-addons/raw/master/smart-friends-bridge/images/doc04.png" width="250">
+
+  <img src="https://github.com/airthusiast/hassio-addons/raw/master/smart-friends-bridge/images/doc04.png" alt="Add airthusiast repository" width="250">
 - The Schellenberg add-on should now be visible in the store
 
 ### Prepare the MQTT Broker
@@ -57,10 +60,11 @@ Detailled information on how to setup MQTT on Hassio is available [here](https:/
   **Extra API parameters**:
   In order to find these values, simply open the Smart Friends App (or Schellenberg app) and go to the information page as illustrated:
 
-  <img src="https://github.com/airthusiast/hassio-addons/raw/master/smart-friends-bridge/images/doc00.jpg" width="900">
+  <img src="https://github.com/airthusiast/hassio-addons/raw/master/smart-friends-bridge/images/doc00.jpg" alt="Gather extra params from app" width="900">
 
-- Now the Smart Friends Bridge addon is ready to be started.
-  <img src="https://github.com/airthusiast/hassio-addons/raw/master/smart-friends-bridge/images/doc05.png" width="400">
+- Now the Smart Friends Bridge add-on is ready to be started.
+
+  <img src="https://github.com/airthusiast/hassio-addons/raw/master/smart-friends-bridge/images/doc05.png" alt="Start Smart Friends Bridge add-on" width="400">
 
 
 ### Collect devices ID's
@@ -101,10 +105,10 @@ Write them down, you will need them in the next step!
 
 **Note:** If debug mode is enabled you will see much more output. If it's too verbose, simply disable it.
 
-##### Information about devices IDs
+#### Information about devices IDs
 A physical device can have multiple devices within Smart Friends. They are all grouped by MasterDeviceID:
 
-<img src="https://github.com/airthusiast/smart-friends-bridge/raw/master/images/doc02.png" width="600">
+<img src="https://github.com/airthusiast/smart-friends-bridge/raw/master/images/doc02.png" alt="Schema about device ID" width="600">
 
 Each device has its own purpose, for instance positioning of roller shutter, brightness of light, on/off, etc...
 
@@ -115,7 +119,7 @@ All is needed:
 - the correct device ID
 - using the correct value format. By observing current values, it is easy to spot the required format.
 
-##### How to get current device value?
+#### How to get current device value?
 
 Any device value is published in real-time to the following topic:
 
@@ -127,7 +131,7 @@ Simply replace the xxxxxx by the device ID.
 
 There is one topic per device. The MQTT client (Hassio, or any other) simply needs to subscribe to the required topic. 
 
-##### How to update device state/value?
+#### How to update device state/value?
 
 Updating a device status is as simple as the previous step.
 
@@ -147,7 +151,7 @@ The MQTT client needs to publish the new value to the dedicated topic. The infor
 
 This is a simple use case: Controlling roller shutters (alias covers or rolling shutters...)
 
-<img src="https://github.com/airthusiast/hassio-addons/raw/master/smart-friends-bridge/images/doc01.png" width="400">
+<img src="https://github.com/airthusiast/hassio-addons/raw/master/smart-friends-bridge/images/doc01.png" alt="Schellenberg roller shutter example" width="400">
 
 The example shown above simply requires the creation of a **MQTT cover**.
 
@@ -193,7 +197,7 @@ cover:
 
 The Smart Friends Box is capable of handling any Zigbee device, including Philips Hue lamps.
 
-<img src="images/doc00.png" width="300">
+<img src="https://github.com/airthusiast/hassio-addons/raw/master/smart-friends-bridge/images/doc00.png" alt="Philips Hue example" width="300">
 
 The example shown above simply requires the creation of a **[MQTT light](https://www.home-assistant.io/integrations/light.mqtt/)**.
 
