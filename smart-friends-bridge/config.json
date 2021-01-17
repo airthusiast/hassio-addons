@@ -1,0 +1,52 @@
+{
+	"name": "Smart Friends Bridge",
+	"version": "1.0",
+	"slug": "smartfriendsbridge",
+	"description": "Control your Smart Friends Box",
+	"url": "https://github.com/airthusiast/hassio-addons",
+	"arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
+	"startup": "system",
+	"boot": "auto",
+	"host_network": "false",
+	"options": {
+		"connexion": {
+			"host": "sh1box.local",
+			"port": 4300,
+			"username": null,
+			"password": null
+		},
+		"advanced": {
+			"enableDebug": true,
+			"cSymbol": "D19015",
+			"cSymbolAddon": "i",
+			"shcVersion": "2.14.5",
+			"shApiVersion": "2.13"
+		},
+		"mqtt": {
+			"url": "mqtt://mqqt.example.com",
+			"username": "myusername",
+			"password": "mypassword"
+		}
+	},
+	"schema": {
+		"connexion": {
+			"host": "str",
+			"port": "int",
+			"username": "str",
+			"password": "password"
+		},
+		"advanced": {
+			"enableDebug": "bool",
+			"cSymbol": "str",
+			"cSymbolAddon": "str",
+			"shcVersion": "str",
+			"shApiVersion": "str"
+		},
+		"mqtt": {
+			"url": "str",
+			"username": "str",
+			"password": "password"
+		}
+	}
+	
+}
