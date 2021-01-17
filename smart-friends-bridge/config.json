@@ -47,6 +47,6 @@
 			"username": "str",
 			"password": "password"
 		}
-	}
-	
+	},
+	"image": "airthusiast/smart-friends-bridge-{arch}"
 }
