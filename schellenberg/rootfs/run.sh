@@ -4,4 +4,4 @@
 CONFIG_PATH=/data/options.json
 
 # Run Node.JS in foreground
-exec node node_modules/schellenbergrestapi $CONFIG_PATH
+exec node $(npm get prefix -g)/lib/node_modules/smart-friends-bridge $CONFIG_PATH

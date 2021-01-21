@@ -15,9 +15,9 @@ COPY rootfs /
 RUN chmod a+x /run.sh
 
 # Install Git
-RUN apk add --no-cache git nodejs nodejs-npm
+RUN apk add --no-cache git nodejs-current nodejs-npm
 
 # Install NodeJS modules
-RUN npm install https://github.com/airthusiast/smart-friends-bridge#master
+RUN npm install https://github.com/airthusiast/smart-friends-bridge#1.1.0 -g
 
 CMD [ "/run.sh" ]
