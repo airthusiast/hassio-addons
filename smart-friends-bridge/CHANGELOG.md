@@ -9,3 +9,7 @@
 ### Version 1.1.1
 #### Fixes:
 - Wrong run.sh script fixed
+
+### Version 1.1.2
+#### Fixes:
+- JSON values not handled properly

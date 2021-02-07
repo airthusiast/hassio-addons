@@ -18,6 +18,6 @@ RUN chmod a+x /run.sh
 RUN apk add --no-cache git nodejs-current nodejs-npm
 
 # Install NodeJS modules
-RUN npm install https://github.com/airthusiast/smart-friends-bridge#1.1.0 -g
+RUN npm install https://github.com/airthusiast/smart-friends-bridge#1.1.2 -g
 
 CMD [ "/run.sh" ]
